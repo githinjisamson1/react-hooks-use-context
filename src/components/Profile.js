@@ -1,12 +1,14 @@
 import React from "react";
 import Interests from "./Interests";
+import { useGlobalContext } from "../context/userContext";
 
-function Profile({ user, theme }) {
+function Profile() {
+  const { user } = useGlobalContext();
   if (!user) return <h2>Please Login To View Profile</h2>;
   return (
     <div>
-      <h2>{user.name}'s Profile</h2>
-      <Interests interests={user.interests} theme={theme} />
+      <h2>{user}'s Profile</h2>
+      <Interests />
     </div>
   );
 }

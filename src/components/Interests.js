@@ -1,6 +1,8 @@
 import React from "react";
+import { useGlobalContext } from "../context/userContext";
 
-function Interests({ interests, theme }) {
+function Interests() {
+  const { interests, theme } = useGlobalContext();
   return (
     <div>
       <h4>Interests</h4>

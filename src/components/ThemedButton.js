@@ -1,7 +1,9 @@
 import React from "react";
+import { useGlobalContext } from "../context/userContext";
 
-function ThemedButton({ theme, ...props }) {
-  return <button className={theme} {...props} />;
+function ThemedButton() {
+  const { theme } = useGlobalContext();
+  return <button className={theme} />;
 }
 
 export default ThemedButton;
